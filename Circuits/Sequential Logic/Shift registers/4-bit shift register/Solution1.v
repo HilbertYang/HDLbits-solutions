@@ -5,7 +5,7 @@ module top_module(
     input ena,
     input [3:0] data,
     output reg [3:0] q); 
-    always @(posedge clk)begin
+    always @(posedge clk or posedge areset)begin
         if(areset)begin
         q <= 0;
         end
